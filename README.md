@@ -111,4 +111,30 @@ https://gist.github.com/cea2k/1318020
 
 **3. Доработать unit-файл Nginx (nginx.service) для запуска нескольких инстансов сервера с разными конфигурационными файлами одновременно:**
 
+Установим Nginx из стандартного репозитория:
 
+У меня уже установлен пакет:
+
+<img width="688" height="113" alt="image" src="https://github.com/user-attachments/assets/a3879c92-b648-454a-9082-e918f2899974" />
+
+Для запуска нескольких экземпляров сервиса модифицируем исходный service для использования различной конфигурации, 
+
+а также PID-файлов. Для этого создадим новый Unit для работы с шаблонами (/etc/systemd/system/nginx@.service):
+
+<img width="688" height="370" alt="image" src="https://github.com/user-attachments/assets/069a3fb5-5887-4f4a-bc42-e3fd5206aa6f" />
+
+Далее необходимо создать два файла конфигурации (/etc/nginx/nginx-first.conf, /etc/nginx/nginx-second.conf). 
+
+Их можно сформировать из стандартного конфига /etc/nginx/nginx.conf, 
+
+с модификацией путей до PID-файлов и разделением по портам:
+
+<img width="504" height="91" alt="image" src="https://github.com/user-attachments/assets/e2c87681-21e7-4c59-b6e8-2e894ae639d6" />
+
+<img width="559" height="86" alt="image" src="https://github.com/user-attachments/assets/08b99ccd-b279-471f-ad2a-9ee5e6e6fee2" />
+
+<img width="1136" height="414" alt="image" src="https://github.com/user-attachments/assets/a700f3ba-44dc-4fec-8e48-e9ddfa8e31d0" />
+
+<img width="1151" height="375" alt="image" src="https://github.com/user-attachments/assets/d0579497-1358-44e2-96f6-a9f84a69bdba" />
+
+Домашнее задание выполнено.
