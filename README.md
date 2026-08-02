@@ -1,6 +1,6 @@
 # LinuxTecher7-SystemD
 
-Работа с загрузчиком, ДЗ №7
+Работа с SystemD, ДЗ №7
 
 Создал аккаунт на GitHub - https://github.com/
 
