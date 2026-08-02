@@ -1,4 +1,4 @@
-# Linuxtecher7-SystemD
+# LinuxTecher7-SystemD
 
 Работа с загрузчиком, ДЗ №7
 
