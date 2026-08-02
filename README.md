@@ -21,9 +21,9 @@ Oracle VirtualBox (https://www.virtualbox.org/wiki/Linux_Downloads).
 Systemd — создание unit-файла
 
 
-1. Написать service, который будет раз в 30 секунд мониторить лог на предмет наличия ключевого слова
+**1. Написать service, который будет раз в 30 секунд мониторить лог на предмет наличия ключевого слова
    
-   (файл лога и ключевое слово должны задаваться в /etc/default).
+   (файл лога и ключевое слово должны задаваться в /etc/default).**
 
 Для начала создам файл с конфигурацией для сервиса в директории 
 
@@ -76,8 +76,39 @@ Systemd — создание unit-файла
 <img width="689" height="203" alt="image" src="https://github.com/user-attachments/assets/19b54768-abf8-4872-bf5e-68dce51d30d1" />
 
 
-**Установить spawn-fcgi и создать unit-файл (spawn-fcgi.sevice) с помощью переделки init-скрипта**
+**2. Установить spawn-fcgi и создать unit-файл (spawn-fcgi.sevice) с помощью переделки init-скрипта**
 
+Устанавливаю spawn-fcgi и необходимые для него пакеты:
 
+Процесс установки:
+
+<img width="686" height="466" alt="image" src="https://github.com/user-attachments/assets/fce59fc6-7632-4c9b-a5c2-95951395bae7" />
+
+Установил
+
+<img width="620" height="285" alt="image" src="https://github.com/user-attachments/assets/94d5e43d-502a-442a-9756-e598db9deab7" />
+
+Сам Init скрипт, который будe переписывать, найду здесь:
+https://gist.github.com/cea2k/1318020 
+
+Но перед этим необходимо создать файл с настройками для будущего сервиса в файле /etc/spawn-fcgi/fcgi.conf.
+
+Он должен получится следующего вида:
+
+<img width="635" height="156" alt="image" src="https://github.com/user-attachments/assets/62cbaec3-fba6-4994-bb9f-f0206575ff2a" />
+
+А сам юнит-файл будет примерно следующего вида:
+
+<img width="683" height="259" alt="image" src="https://github.com/user-attachments/assets/09b6913d-dc2d-4ac2-8db4-4f9dba02d7cf" />
+
+Перечитаю все конфигурационные файлы (юниты) и обновим его внутреннюю базу данных о службах:
+
+<img width="688" height="53" alt="image" src="https://github.com/user-attachments/assets/01e02410-6207-4a3d-9463-bd4c547d71dc" />
+
+Убеждаюсь, что все успешно работает:
+
+<img width="689" height="733" alt="image" src="https://github.com/user-attachments/assets/ffa62a92-5298-4d48-8b87-7d5c2f1be585" />
+
+**3. Доработать unit-файл Nginx (nginx.service) для запуска нескольких инстансов сервера с разными конфигурационными файлами одновременно:**
 
 
