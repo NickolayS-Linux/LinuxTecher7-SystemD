@@ -137,4 +137,6 @@ https://gist.github.com/cea2k/1318020
 
 <img width="1151" height="375" alt="image" src="https://github.com/user-attachments/assets/d0579497-1358-44e2-96f6-a9f84a69bdba" />
 
+<img width="1161" height="211" alt="image" src="https://github.com/user-attachments/assets/6695b4d4-be72-4899-85ff-b4713be61632" />
+
 Домашнее задание выполнено.
