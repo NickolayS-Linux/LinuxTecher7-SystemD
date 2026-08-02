@@ -67,5 +67,17 @@ Systemd — создание unit-файла
 
 Ошибок нет при запуске.
 
+Запускаем сервисы:
+
+<img width="589" height="69" alt="image" src="https://github.com/user-attachments/assets/98bcf530-a272-4951-802d-fef8bf104348" />
+
+Получаем результат:
+
+<img width="689" height="203" alt="image" src="https://github.com/user-attachments/assets/19b54768-abf8-4872-bf5e-68dce51d30d1" />
+
+
+**Установить spawn-fcgi и создать unit-файл (spawn-fcgi.sevice) с помощью переделки init-скрипта**
+
+
 
 
