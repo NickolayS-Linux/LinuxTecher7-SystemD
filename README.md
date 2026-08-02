@@ -61,5 +61,11 @@ Systemd — создание unit-файла
 
 <img width="402" height="57" alt="image" src="https://github.com/user-attachments/assets/e3e6d37d-be8b-42c3-9949-c6f0d4355be5" />
 
+Затем запущу timer:
+
+<img width="461" height="65" alt="image" src="https://github.com/user-attachments/assets/b08b1759-7291-4de5-a6a8-d1db6306bcae" />
+
+Ошибок нет при запуске.
+
 
 
